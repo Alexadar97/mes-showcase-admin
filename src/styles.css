@@ -1,0 +1,156 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #F2F2F2;
+}
+section.main-page {
+    padding: 49px 0px 0px 0px;
+}
+h3.title {
+    font-family: Roboto;
+    font-size: 18px;
+    color: #003B60;
+    font-weight: bold;
+    text-align: left;
+}
+@media (max-width:768px){
+    h3.title {
+        text-align: center;
+    }
+    .col-12.col-sm-6.col-md-6.col-lg-6.col-xl-6.text-right.add-new {
+        text-align: center !important;
+    }
+
+}
+
+select.form-control-select {
+    width: 100%;
+    border-radius: 5px;
+}
+h6.title {
+    font-family: Roboto;
+    font-size: 20px;
+    color: #003B60;
+    font-weight: bold;
+}
+label.btn.btn-sm.addnew {
+    background: #003B60;
+    border-radius: 3px;
+    width: 124px;
+    padding: 4px;
+    color: #fff;
+    margin: 0% 0% 0% 0%;
+    cursor: pointer;
+}
+label.btn.btn-sm.addnew:hover{
+    background: #02243a;
+}
+.card.mt-1.text-center{
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 6px;
+}
+span.card-title.mt-4 {
+    font-family: Roboto;
+    font-size: 20px;
+    color: #767676;
+}
+span.sub-title{
+    font-family: Roboto;
+    font-size: 15px;
+    color: #767676;
+}
+button.btn-sm.btn-success {
+    background: #003B60;
+    border-radius: 29px;
+    border: none;
+    padding: 7px 29px 7px 29px;
+}
+button.btn-sm.btn-success:active {
+    background: #003B60;
+}
+.white-bar {
+    background: #fff;
+    padding: 36px;
+}
+
+.progress {
+    height: 5px;
+}
+h6.text-left {
+    font-size: 8px;
+}
+button.btn-sm.btn-success.text-center{
+    background: #003B60;
+    border-radius: 3px;
+    border: none;
+    padding: 7px 29px 7px 29px;
+}
+button.btn-sm.btn-success.text-center:active{
+    background: #003B60;
+}
+button.btn-sm.btn-success.text-center:hover{
+    background: #02243a;
+}
+
+ul.list-group {
+    list-style: none;
+    display: -webkit-inline-box;
+    background: #F2F2F2;
+    border-radius: 4.5px;
+    height: 30px
+}
+li.list-item {
+    padding: 0px 66px 0px 3px;
+}
+td,th{
+    border:none;
+}
+.example-container {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 25px 25px 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  td.delete-cursor {
+    cursor: pointer;
+    background: #F2F2F2;
+}
+td.bg-color {
+  background: #F2F2F2;
+  cursor: auto;
+}
+tr.serial-no{
+  background: #fff;
+  border-bottom: 1px solid #979797;
+}
+section.sub-main-page {
+    padding: 0px 56px 0px 56px;
+}
+
+/*navbar style */
+
+li.dropdown-item {
+    background: #fff;
+    position: absolute;
+    right: 6px;
+    padding: 4px 14px 4px 9px;
+    top: -4px;
+    border-radius: 6px;
+    width: 57px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #003B60;
+  }
+  li.dropdown-item:hover {
+    background: #fff !important;
+    cursor: pointer;
+  }
+  li.dropdown-item:focus {
+    color: #000 !important;
+  }
+  li.dropdown-item:active {
+    color: #000 !important;
+  }

@@ -1,0 +1,148 @@
+<form [formGroup]="mainpageform">
+  <section class="main-page">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <div class="row mb-4 mt-4">
+            <div class="col-md-2"></div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+              <div class="row mb-3">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <h6 class="title">Select Location</h6>
+                  <select class="form-control-select" formControlName="select">
+                    <option disabled value="null">Select Location</option>
+                    <option value="0">Select Location 1</option>
+                    <option value="1">Select Location 2</option>
+                    <option value="2">Select Location 3</option>
+                  </select>
+                  <small class="text-danger errormsg" *ngIf="
+              !mainpageform.controls.select.valid && mainpageform.controls.select.touched
+            ">Location is required</small>
+                </div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
+                  <h3 class="title mt-1">
+                    Uploaded Files
+                  </h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-right add-new">
+                  <!-- <span class="card-title mt-4">Drag or Drop File</span>
+                    <span class="sub-title">OR</span> -->
+                  <label for="uploadFile" class="btn btn-sm addnew" style="font-size: 12px;margin-top: 0px;">
+
+                    <i class="fa fa-file"></i> &nbsp; &nbsp;Add New File
+                  </label>
+                  <!-- <i class="fa fa-refresh mb-2" (click)="cancleUploadsuppmaster()" *ngIf="Uploadsuppmasterfilename!=''"></i> -->
+                  <input type="file" id="uploadFile" #uploadFileid style="display: none" (change)="fileupload($event)"
+                    accept="image/png, image/jpeg, image/jpg, video/mp4,video/x-m4v,video/*, application/msword, application/vnd.ms-excel, application/pdf " />
+                </div>
+              </div>
+
+              <div class="card mt-3" style="width: 100%;">
+                <table class="table" style="background: #fff;border-bottom: 1px solid #b5afaf;">
+                  <thead>
+                    <td style="text-align:center;">SI.no</td>
+                    <td style="width: 46%;">File Name</td>
+                    <td>Delay</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </thead>
+
+
+                </table>
+                <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let file of files;let i=index" cdkDrag>
+                    <p class="file">{{i+1}}</p>
+                    <p id="upload" class="file" (click)="preview(file.type,i)" style="margin-left: -60px !important;">
+                      {{file.name}}</p>
+                    <p class="seconds" (click)="sencondsmodal(i)">{{file.delay}} sec</p>
+                    <img class="delete" src="assets/img/delete.png" (click)="delete(i)">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row mt-2">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                  <button class=" btn-sm btn-success text-center mt-2" (click)="submitform()"> Submit </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" style="background: #fff;height: 85.8vh;">
+          <h2 class="previewhead mt-1 mb-3">Preview</h2>
+          <div class="preview-bg">
+            <!-- <span style="color:red;" *ngIf="message">{{message}}</span> -->
+            <div class="image" *ngIf="previewtype == 'image'">
+              <img class="img-fluid" [src]="imgURL" height="66vh" *ngIf="imgURL">
+            </div>
+            <video controls class="vid" *ngIf="previewtype == 'video'" autoplay>
+              <source [src]="videoURl" type="video/mp4" *ngIf="videoURl" >
+            </video>
+
+            <ng-container *ngIf="previewtype == 'application'">
+              <div *ngIf="isLoaded" style="text-align: center;">
+                <button (click)="prevPage()" [disabled]="page === 1"><< Prev</button>
+                &nbsp;<span>{{ page }} / {{ totalPages }}</span>&nbsp;
+                <button (click)="nextPage()" [disabled]="page === totalPages">Next >></button>
+              </div>
+              <pdf-viewer [src]="pdfURL" [show-all]="false" pdfZoom=1.0; [page]="page"
+                (after-load-complete)="afterLoadComplete($event)" *ngIf="pdfURL"></pdf-viewer>
+            </ng-container>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="seconds" class="modal fade">
+    <div id="modal-dialog" class="modal-dialog" role="document">
+      <div id="modal-content" class="modal-content">
+        <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <div class="modal-body">
+          <div>
+            <h6 class="title">Change Time Delay</h6>
+            <input class="control-form mt-2" type="number" formControlName="save" #delayvalue
+              id="delayval" (input)="keydowncheck()">&nbsp;<span>sec</span>
+          </div>
+          <small class="text-danger">{{delayerror}}</small>
+        </div>
+        <div class="modal-footer" style="border-top: none;">
+          <button type="button" class="btn btn-primary " (click)="save(delayvalue.value)">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<div class="modal fade" id="submitform" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Submit</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <p> Are you sure want to submit ?</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-md addnew" (click)="confirmsubmitform()">yes</button>
+        <button type="button" class="btn btn-md addnew" data-dismiss="modal">No </button>
+      </div>
+    </div>
+  </div>
+</div>

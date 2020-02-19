@@ -1,0 +1,282 @@
+.logo {
+    background: none;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 10px;
+}
+/* .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} */
+
+.dropdownlist .card,.dropdownlist .card-header{
+    text-align:center;
+}
+.dropdownlist .card{
+  /* border:none;
+  margin: -10px -10px 10px -10px;
+  padding: 10px; */
+}
+.dropdownlist span{
+    font-size:60px;
+  }
+  .signout{
+      color:red;
+  }
+  .account {
+    min-width: 26rem !important;
+    left: 10px !important;
+    padding-top: 0px !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #F6F6F6 !important; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #F6F6F6 !important; 
+}
+.colordark{
+    color:#000;
+    text-transform: capitalize;
+    font-size: 14px !important;
+}
+.colorlight{
+    color:#717171;
+    text-transform: capitalize;
+    font-size: 14px !important;
+
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    float: left;
+}
+.addressdetails {
+    height: 60vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+.addresslist{
+    margin-bottom : 20px;
+}
+.addresslist .col-md-9{
+    padding-left:0px !important;
+}
+.icon-checkmark2{
+    opacity: 0;
+}
+.addresslist:hover .icon-checkmark2{
+    opacity: 1;
+}
+.cardback{
+    background: white;
+    border: none;
+}
+.cardorg{
+    margin-bottom:0px;
+}
+.icon-checkmark{
+    color:green;
+}
+.user
+{
+    margin-top: 18px !important;
+    font-size: 14px !important;
+}
+.navbar-toolbar .nav-link {
+    padding: 1.5715rem;
+}
+.navbar-toggle {
+    padding: 4px 4px;
+    margin-left: 14px;
+    margin-top: 19px;
+    
+}
+
+@media screen and (max-width:768px) {
+ 
+    #myNavbar {
+        display: block!important;
+    }
+    .site-menu-title>a {
+        background: #EEEEEE !important; 
+        font-size: 12px !important;
+        border-left: 3px solid #C07C0E !important;
+        font-weight: 800 !important;
+    }
+    
+}
+@media screen and (min-width:768px) {
+    #myNavbar {
+        display: none!important;
+    }
+}
+@media (min-width: 768px)
+{
+.site-navbar .navbar-header {
+    width: 213px !important;
+}
+}
+.site-navbar .navbar-header .navbar-brand-logo {
+    height: auto !important;
+    width: 100% !important;
+}
+
+/* daimler image */
+img.img-fluid {
+    position: absolute;
+    right: 44px;
+    top: 10px;
+    width: 28px;
+    background: #434343;
+    padding: 3px 5px 3px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.site-navbar .navbar-container {
+    background-color:transparent !important;
+    
+}
+img.img-fluid.daim {
+    height: 35px;
+    top: 31%;
+    left: 40%;
+}
+.innerhead{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 75px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    min-width: 0px;
+}
+img.innerpgtop{
+    width: 100%;
+    min-height: 56px;
+    height: 100%;
+}
+img.innerpglogo {
+    position: absolute;
+    margin: 11px 0px 0px 43px;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 9vw;
+    height: auto;
+    max-width: 269px;
+    min-width: 153px;
+}
+ul.logomenus {
+    display: inline-flex;
+    list-style: none;
+    float: right;
+    color: #fff;
+    padding: 47px 0px 0px 0px;
+}
+.logomenus li.cursor {
+    padding: 0px 9px 0px 0px;
+}
+.logomenus li.sep {
+    padding: 0px 9px 0px 0px;
+}
+.logomenus li.acc-im {
+    padding: 0px 9px 0px 0px;
+}
+.logomenus a.cursor {
+    padding: 0px 9px 0px 0px;
+}
+.logomenus li a {
+    
+    color: #fff!important;
+}
+.site-navbar {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.bottom-bar {
+    background: #C1C1C1;
+    height: 10px;
+    width: 100%;
+    margin: 28px 0px;
+    position: absolute;
+    left: 0px;
+}
+.sub-bottom-bar {
+    height: 36px;
+    width: 100%;
+    margin: 51px 0px;
+    position: absolute;
+    left: 0px;
+    background: #003B60;
+}
+ul.dropdown-menu.ml-auto.show {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 21px;
+    text-align: end;
+}
+.dropdown-item:active {
+    background: transparent;
+}
+.dropdown-item:hover {
+    background: transparent;
+}
+img.img-home{
+    height: 27px;
+    position: absolute;
+    right: 0px;
+    top: 22px;
+    padding: 0px 106px 0px 0px;
+}
